@@ -7,8 +7,9 @@
     "start": "node index.js",
     "init:config": "sequelize init:config",
     "db:create": "sequelize db:create",
-  
+    "lint": "eslint **/*.js",
     "test": "NODE_ENV=test jest  --verbose --coverage"
+
   },
   "repository": {
     "type": "git",
