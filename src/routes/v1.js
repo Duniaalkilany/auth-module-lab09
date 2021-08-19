@@ -21,8 +21,8 @@ router.param('model', (req, res, next) => {
   });
 
 //read
-  router.get('/:model',basicAuth, permissions('read'), handleGetAll);
-  router.get('/:model/:id',basicAuth, permissions('read'), handleGetOne);
+  router.get('/:model', bearerAuth, permissions('read'), handleGetAll);
+  router.get('/:model/:id', bearerAuth, permissions('read'), handleGetOne);
 //create
   router.post('/:model', bearerAuth, permissions('create'), handleCreate);
 //update
@@ -80,7 +80,7 @@ async function handleGetAll(req, res) {
     try {
       let id = req.params.id;
       let deletedRecord = await req.model.delete(id);
-      res.status(200).json(deletedRecord);
+      res.status(200).send('deleted successfully :)' );
     } catch(err) {
       throw new Error(err.message)
     }
