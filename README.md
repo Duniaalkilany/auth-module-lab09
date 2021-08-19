@@ -23,6 +23,7 @@ https://dunia-auth-lab9.herokuapp.com/
 
 
 * ### pull request :
+https://github.com/Duniaalkilany/auth-module-lab09/pull/4
 
 
 
@@ -56,7 +57,7 @@ https://dunia-auth-lab9.herokuapp.com/
 
 ## Setup 
 ### .env requirements :
-* ### PORT=3000
+* ### PORT=4000
 * ### NODE_ENV=test
 * ### SECRET - used to create jwt
 * ### DATABASE_URL
